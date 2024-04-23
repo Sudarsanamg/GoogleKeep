@@ -3,12 +3,14 @@ import { View, Text, TextInput, TouchableOpacity, StyleSheet } from 'react-nativ
 import { NavigationContainer } from '@react-navigation/native';
 import NewAccount from './NewAccount';
 
+
 const Init = ({navigation}) => {
+  console.log(navigation)
   return (
     <View style={styles.container}>
       <Text style={styles.title} >Notes App</Text>
       <TouchableOpacity style={styles.button} >
-        <Text style={styles.buttonText} >Login</Text>
+        <Text style={styles.buttonText} onPress={()=> navigation.navigate('Login')} >Login</Text>
       </TouchableOpacity>
       <TouchableOpacity style={styles.button} >
         <Text style={styles.buttonText} onPress={()=> navigation.navigate('NewAccount')}>New User? Create new Account!</Text>
