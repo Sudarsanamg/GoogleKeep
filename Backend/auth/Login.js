@@ -9,6 +9,7 @@ const Login = async (req, res) => {
     try {
         // Check if user with the provided email exists
         const user = await model.findOne({ email: email});
+        console.log(user);
         const isPasswordCorrect= await bcrypt.compare(password,user.password)
         if (!user) {
             return res.status(400).json({ message: "User does not exist" });

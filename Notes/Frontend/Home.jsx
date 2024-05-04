@@ -59,6 +59,8 @@ const Home = ({ navigation }) => {
     }
 }
 
+
+
   return (
     <View style={styles.view}>
       <Text>Home</Text>
@@ -84,8 +86,8 @@ const Home = ({ navigation }) => {
 
       <ScrollView style={styles.scrollView} contentContainerStyle={styles.scrollViewContent}>
         {items.map((item, index) => (
-          <View style={styles.notes}>
-          <Text key={index}>{item}<AntDesign name="edit" size={24} color="black" />  <TouchableOpacity><Ionicons name="trash-bin" onPress={()=>handleDelete(index)} size={24} color="black" /></TouchableOpacity> </Text> 
+          <View  key={index}style={styles.notes}>
+          <Text key={index}>{index} {item}  <TouchableOpacity><Ionicons name="trash-bin"  onPress={()=>handleDelete(index)} size={24} color="black" /></TouchableOpacity> </Text> 
           </View>
         ))}
       </ScrollView>

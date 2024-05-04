@@ -2,7 +2,7 @@ const model = require('../Database/Models/UserModel');
 
 const Delete = async (req, res) => {
     const { email, index } = req.body;
-
+    console.log(index);
     try {
         const user = await model.findOne({ email });
 
